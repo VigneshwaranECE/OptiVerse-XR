@@ -111,7 +111,7 @@ export default function CompressExperience() {
               </div>
 
               <div className="overflow-hidden rounded-[20px] border border-white/10 bg-[#12111d] shadow-[0_14px_34px_rgba(2,6,23,0.2)]">
-                <div className="relative min-h-[420px] overflow-hidden bg-[radial-gradient(circle_at_50%_62%,rgba(139,92,246,0.12),transparent_28%),linear-gradient(180deg,#12111d_0%,#12111d_100%)]">
+                <div className="relative min-h-[456px] overflow-hidden bg-[radial-gradient(circle_at_50%_62%,rgba(139,92,246,0.12),transparent_28%),linear-gradient(180deg,#12111d_0%,#12111d_100%)]">
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(127,86,217,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(127,86,217,0.14)_1px,transparent_1px)] bg-[size:30px_30px] [mask-image:linear-gradient(to_bottom,transparent_8%,black_24%,black_100%)]" />
                   <div className="absolute inset-x-0 top-1/2 h-px bg-[#8B5CF6]/80" />
                   <div className="absolute inset-y-[30%] left-1/2 w-px bg-[#8B5CF6]/80" />
@@ -124,9 +124,9 @@ export default function CompressExperience() {
             </div>
 
           <div className="flex h-full flex-col">
-            <div className="rounded-[16px] border border-white/10 bg-[linear-gradient(180deg,rgba(38,55,78,0.88),rgba(29,43,63,0.82))] px-3.5 py-3 shadow-[0_14px_34px_rgba(2,6,23,0.2)] backdrop-blur-2xl">
+            <div className="rounded-[16px] border border-white/10 bg-[linear-gradient(180deg,rgba(38,55,78,0.88),rgba(29,43,63,0.82))] px-3.5 py-2.5 shadow-[0_14px_34px_rgba(2,6,23,0.2)] backdrop-blur-2xl">
               <h3 className="text-[0.86rem] font-bold text-white">Optimization Level</h3>
-              <div className="mt-2.5 space-y-2">
+              <div className="mt-2 space-y-1.5">
                   <LevelOption
                     title="Quality"
                     subtitle="Minimal"
@@ -157,24 +157,24 @@ export default function CompressExperience() {
               </div>
             </div>
 
-            <div className="mt-3 rounded-[16px] border border-white/10 bg-[linear-gradient(180deg,rgba(38,55,78,0.88),rgba(29,43,63,0.82))] px-3.5 py-3 shadow-[0_14px_34px_rgba(2,6,23,0.2)] backdrop-blur-2xl">
-              <div className="flex items-center gap-3">
+            <div className="mt-2.5 rounded-[16px] border border-white/10 bg-[linear-gradient(180deg,rgba(38,55,78,0.88),rgba(29,43,63,0.82))] px-3.5 py-2.5 shadow-[0_14px_34px_rgba(2,6,23,0.2)] backdrop-blur-2xl">
+              <div className="flex items-center gap-2.5">
                 <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-white/8 text-[#D6E0F3]">
                   <Settings2 size={17} />
                   </div>
                   <h3 className="text-[0.9rem] font-bold text-white">Advanced</h3>
                 </div>
-                <div className="mt-2.5 divide-y divide-white/10">
+                <div className="mt-2 divide-y divide-white/10">
                   <AdvancedRow icon={<ScanSearch size={18} />} label="Geometry" />
                   <AdvancedRow icon={<NumberIcon />} label="Quantization" />
                   <AdvancedRow icon={<TextureIcon />} label="Textures" />
                 </div>
               </div>
 
-              <div className="mt-auto pt-3">
+              <div className="pt-2.5">
               <button
                 type="button"
-                className="flex w-full items-center justify-center gap-2 rounded-[16px] bg-[linear-gradient(90deg,#8B5CF6_0%,#22C1F0_100%)] px-4 py-3 text-[0.9rem] font-bold text-white shadow-[0_10px_24px_rgba(34,193,240,0.16)] transition hover:brightness-105"
+                className="flex w-full items-center justify-center gap-2 rounded-[16px] bg-[linear-gradient(90deg,#8B5CF6_0%,#22C1F0_100%)] px-4 py-2.5 text-[0.88rem] font-bold text-white shadow-[0_10px_24px_rgba(34,193,240,0.16)] transition hover:brightness-105"
               >
                 <span className="text-[0.92rem]">⚡</span>
                 Optimize Now
@@ -183,7 +183,7 @@ export default function CompressExperience() {
               <button
                 type="button"
                 onClick={() => setUploadedFile(null)}
-                className="mt-3 w-full rounded-[14px] border border-white/10 bg-white/[0.04] px-4 py-3 text-[0.84rem] font-semibold text-[#D8E0F0] transition hover:bg-white/[0.07]"
+                className="mt-2.5 w-full rounded-[14px] border border-white/10 bg-white/[0.04] px-4 py-2.5 text-[0.82rem] font-semibold text-[#D8E0F0] transition hover:bg-white/[0.07]"
               >
                 Start Over
               </button>
@@ -301,7 +301,7 @@ function LevelOption({
     <button
       type="button"
       onClick={onClick}
-      className={`flex w-full items-center justify-between rounded-[15px] border px-3.5 py-3 text-left transition ${
+      className={`flex w-full items-center justify-between rounded-[15px] border px-3.5 py-2.5 text-left transition ${
         highlight
           ? accentClass.includes("#14B8A6")
             ? "border-transparent bg-[linear-gradient(90deg,#14B8A6_0%,#16C7B0_100%)] shadow-[0_10px_24px_rgba(20,184,166,0.16)]"
@@ -311,8 +311,8 @@ function LevelOption({
           : "border-white/8 bg-white/[0.03] hover:bg-white/[0.05]"
       }`}
     >
-      <div className="flex items-center gap-4">
-        <div className={`flex h-8 w-8 items-center justify-center rounded-[10px] text-white ${accentClass}`}>
+      <div className="flex items-center gap-3.5">
+        <div className={`flex h-[30px] w-[30px] items-center justify-center rounded-[10px] text-white ${accentClass}`}>
           {icon}
         </div>
         <div>
@@ -349,9 +349,9 @@ function AdvancedRow({
   return (
     <button
       type="button"
-      className="flex w-full items-center justify-between py-3.5 text-left transition hover:text-white"
+      className="flex w-full items-center justify-between py-3 text-left transition hover:text-white"
     >
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3.5">
         <div className="text-[#D7DDF0]">{icon}</div>
         <span className="text-[0.82rem] font-semibold text-white">{label}</span>
       </div>
