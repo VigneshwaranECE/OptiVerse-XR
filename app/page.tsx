@@ -1,11 +1,12 @@
 import {
   Box,
+  Mail,
   Zap,
 } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-[#0b0f2a] to-[#050816] text-white flex flex-col items-center px-6 pt-12 pb-16 gap-8 overflow-hidden">
+    <main className="relative min-h-screen bg-gradient-to-b from-[#0b0f2a] to-[#050816] text-white flex flex-col items-center px-6 pt-12 pb-16 gap-6 overflow-hidden">
 
       {/* BACKGROUND GLOW */}
       <div className="absolute top-0 left-[-100px] w-[400px] h-[400px] bg-blue-500/20 blur-[120px] rounded-full"></div>
@@ -25,7 +26,7 @@ export default function Home() {
         </div>
 
         {/* TITLE */}
-        <h1 className="text-5xl md:text-[80px] font-extrabold leading-[0.98] tracking-tight">
+        <h1 className="text-4xl md:text-[68px] font-extrabold leading-[0.98] tracking-tight">
           Optimize 3D for <br />
           <span className="bg-gradient-to-r from-[#8B5CF6] via-[#06B6D4] to-[#10B981] bg-clip-text text-transparent">
             Extended Reality
@@ -33,18 +34,18 @@ export default function Home() {
         </h1>
 
         {/* SUBTEXT */}
-        <p className="text-gray-400 mt-5 text-lg md:text-xl max-w-[700px] mx-auto leading-relaxed font-medium">
+        <p className="text-gray-400 mt-4 text-base md:text-lg max-w-[660px] mx-auto leading-relaxed font-medium">
           Compress and optimize 3D assets for VR, AR & MR. Up to 90% file size reduction with client-side processing.
         </p>
 
         {/* BUTTONS */}
-        <div className="flex gap-4 mt-8 justify-center">
+        <div className="flex gap-4 mt-6 justify-center">
 
-          <button className="flex items-center gap-2 px-10 py-4 rounded-2xl bg-gradient-to-r from-[#7C3AED] to-[#0EA5E9] font-semibold text-lg shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:scale-105 hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition duration-300">
-            <Zap size={18} className="text-white" strokeWidth={2.4} /> Start Optimizing
+          <button className="flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-gradient-to-r from-[#7C3AED] to-[#0EA5E9] font-semibold text-base shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:scale-105 hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition duration-300">
+            <Zap size={17} className="text-white" strokeWidth={2.4} /> Start Optimizing
           </button>
 
-          <button className="px-10 py-4 rounded-2xl bg-[#1e293b]/50 border border-white/10 backdrop-blur-md hover:bg-[#1e293b]/80 transition duration-300 font-semibold text-lg text-white">
+          <button className="px-8 py-3.5 rounded-2xl bg-[#1e293b]/50 border border-white/10 backdrop-blur-md hover:bg-[#1e293b]/80 transition duration-300 font-semibold text-base text-white">
             View Models
           </button>
 
@@ -52,7 +53,7 @@ export default function Home() {
       </section>
 
       {/* STATS */}
-      <section className="w-full max-w-[700px] grid grid-cols-2 md:grid-cols-4 gap-1 bg-[#0a0f1d]/40 py-8 px-3 rounded-[32px] backdrop-blur-xl border border-white/5 shadow-2xl z-10">
+      <section className="relative w-full max-w-[620px] grid grid-cols-2 md:grid-cols-4 gap-1 overflow-hidden rounded-[28px] border border-white/5 bg-[#0a0f1d]/40 py-6 px-3 shadow-2xl backdrop-blur-xl z-10 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_18%_50%,rgba(34,211,238,0.2),transparent_42%),radial-gradient(circle_at_82%_20%,rgba(168,85,247,0.17),transparent_38%)] before:pointer-events-none">
         <Stat title="90%" desc="Size Reduction" color="text-[#06B6D4]" />
         <Stat title="13+" desc="File Formats" color="text-[#3B82F6]" />
         <Stat title="100%" desc="Client-Side" color="text-[#06B6D4]" />
@@ -60,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* FEATURES */}
-      <section className="grid grid-cols-1 md:grid-cols-4 gap-3 z-10 w-full max-w-[1000px] mt-2">
+      <section className="grid grid-cols-1 md:grid-cols-4 gap-3 z-10 w-full max-w-[860px]">
         <Feature 
           title="13+ Format Support" 
           desc="GLB, FBX, OBJ, USDZ, DAE & more"
@@ -109,35 +110,100 @@ export default function Home() {
       </section>
 
       {/* WHY */}
-      <section className="max-w-3xl text-center bg-white/5 p-7 rounded-2xl backdrop-blur-xl border border-white/10 shadow-lg z-10">
-        <h2 className="text-2xl font-semibold mb-4">Why OptiVerse XR?</h2>
-        <p className="text-gray-400 leading-relaxed">
-          Your files never leave your device. Everything runs locally using WebAssembly for maximum privacy and speed.
-        </p>
-      </section>
-
-      {/* CONTACT */}
-      <section className="text-center z-10">
-        <h2 className="text-2xl font-semibold mb-6">Contact</h2>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <GlassBox text="example@email.com" />
-          <GlassBox text="Created by You" />
+      <section className="z-10 w-full max-w-[960px] text-center">
+        <h2 className="mb-7 text-[2rem] font-semibold tracking-tight">Why OptiVerse XR?</h2>
+        <div className="rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] px-10 py-10 backdrop-blur-xl">
+          <p className="mx-auto max-w-[760px] text-[1.05rem] leading-relaxed text-[#CFD5E6]">
+            OptiVerse XR is built on a simple promise: <span className="font-semibold text-white">Your files never leave your device.</span>
+          </p>
+          <p className="mx-auto mt-6 max-w-[820px] text-[1rem] leading-[1.75] text-[#B8C0D4]">
+            Unlike other tools that upload your proprietary assets to a cloud server, OptiVerse XR uses advanced WebAssembly technology (Meshopt, DRACO, KTX2) to process everything locally in your browser. This means standard-grade security for your intellectual property and zero latency transfer times.
+          </p>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="text-gray-500 text-sm z-10">
-        © 2026 OptiVerse XR
-      </footer>
+      {/* CONTACT */}
+      <section className="z-10 w-full max-w-[900px] text-center">
+        <h2 className="text-[1.75rem] font-semibold tracking-tight">Contact Us</h2>
+        <p className="mt-3 text-[0.92rem] text-[#AEB9CF]">
+          Have questions or feedback? We&apos;d love to hear from you.
+        </p>
 
-      {/* FLOATING NAV */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-xl px-6 py-3 rounded-full flex gap-6 shadow-lg border border-white/10 z-20">
-        <span className="text-blue-400">Home</span>
-        <span>↓</span>
-        <span>⇄</span>
-        <span>👁</span>
-      </div>
+        <div className="mt-7 grid gap-5 md:grid-cols-2">
+          <div className="rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-5 text-left backdrop-blur-xl">
+            <h3 className="text-[1.5rem] font-semibold">Get in Touch</h3>
+            <div className="mt-5 space-y-3.5">
+              <ContactItem
+                icon={<Mail size={24} className="text-white" />}
+                iconClassName="bg-[linear-gradient(145deg,#A855F7_0%,#7C3AED_100%)]"
+                label="EMAIL"
+                value="vigneshsaran2596@gmail.com"
+              />
+              <ContactItem
+                icon={<LinkedInLogo />}
+                iconClassName="bg-[linear-gradient(145deg,#1DA1F2_0%,#0A66C2_100%)]"
+                label="LINKEDIN"
+                value="Vigneshwaran B"
+              />
+            </div>
+          </div>
+
+          <div className="rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-5 text-left backdrop-blur-xl">
+            <h3 className="text-[1.5rem] font-semibold">About the Creator</h3>
+            <div className="mt-5 flex items-start gap-3.5">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[16px] bg-[linear-gradient(145deg,#17C8D1_0%,#12B981_100%)] text-[1.35rem] shadow-[0_18px_36px_rgba(20,184,166,0.18)]">
+                👨‍💻
+              </div>
+              <div>
+                <h4 className="text-[1.28rem] font-semibold leading-none">Vigneshwaran B</h4>
+                <p className="mt-2 text-[0.88rem] text-[#9DB2D5]">XR Developer &amp; Real-Time 3D Creator</p>
+                <p className="mt-3.5 max-w-[320px] text-[0.86rem] leading-[1.65] text-[#C2CDE0]">
+                  Turning ideas into interactive 3D experiences using Unity, Blender, and WebXR. Exploring the future of spatial computing through AR, VR, and immersive web technologies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="z-10 mt-10 w-full border-t border-white/8 pt-10">
+        <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center justify-between gap-6 px-4 text-center md:flex-row md:text-left">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-[14px] bg-gradient-to-br from-[#7C3AED] to-[#38BDF8] shadow-[inset_0_1px_1px_rgba(255,255,255,0.18)]">
+              <Box size={18} className="text-white" />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[1.05rem] font-semibold text-white">OptiVerse XR</span>
+              <span className="text-[0.95rem] text-[#8F96AE]">© 2026</span>
+            </div>
+          </div>
+
+          <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[0.98rem] text-[#9CA8C3]">
+            <a href="#" className="transition hover:text-white">About Us</a>
+            <a href="#" className="transition hover:text-white">Blog</a>
+            <a href="#" className="transition hover:text-white">Privacy Policy</a>
+            <a href="#" className="transition hover:text-white">Terms of Service</a>
+            <a href="#" className="transition hover:text-white">Contact</a>
+          </nav>
+
+          <div className="flex items-center gap-4">
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              className="flex h-10 w-10 items-center justify-center rounded-[12px] border border-white/6 bg-white/6 text-[#A9B1C8] transition hover:bg-white/10 hover:text-white"
+            >
+              <FooterLinkedIn />
+            </a>
+            <a
+              href="mailto:vigneshsaran2596@gmail.com"
+              aria-label="Email"
+              className="flex h-10 w-10 items-center justify-center rounded-[12px] border border-white/6 bg-white/6 text-[#A9B1C8] transition hover:bg-white/10 hover:text-white"
+            >
+              <Mail size={22} />
+            </a>
+          </div>
+        </div>
+      </footer>
 
     </main>
   );
@@ -148,19 +214,19 @@ export default function Home() {
 function Stat({ title, desc }: any) {
   return (
     <div className="text-center">
-      <h2 className="text-3xl font-bold text-blue-400">{title}</h2>
-      <p className="text-gray-400 text-sm mt-1">{desc}</p>
+      <h2 className="text-[2rem] font-bold text-blue-400">{title}</h2>
+      <p className="mt-1 text-[0.95rem] text-gray-400">{desc}</p>
     </div>
   );
 }
 
 function Feature({ title, desc, icon }: any) {
   return (
-    <div className="bg-[#111827]/50 p-5 rounded-[26px] backdrop-blur-xl border border-white/5 transform hover:-translate-y-2 transition duration-300 flex flex-col items-center text-center gap-2">
+    <div className="relative overflow-hidden bg-[#111827]/50 p-3.5 rounded-[22px] backdrop-blur-xl border border-white/5 transform hover:-translate-y-2 transition duration-300 flex flex-col items-center text-center gap-1.5 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_18%_35%,rgba(56,189,248,0.16),transparent_40%),radial-gradient(circle_at_85%_25%,rgba(168,85,247,0.14),transparent_38%)] before:pointer-events-none">
       {icon}
-      <div className="space-y-1.5">
-        <h3 className="text-base font-bold leading-tight">{title}</h3>
-        <p className="text-[0.92rem] leading-relaxed text-gray-500">{desc}</p>
+      <div className="relative z-10 space-y-1.5">
+        <h3 className="text-[0.9rem] font-bold leading-tight">{title}</h3>
+        <p className="text-[0.8rem] leading-relaxed text-gray-500">{desc}</p>
       </div>
     </div>
   );
@@ -175,10 +241,10 @@ function IconTile({
 }) {
   return (
     <div
-      className={`relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-[20px] border border-white/10 ${className}`}
+      className={`relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-[15px] border border-white/10 ${className}`}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_22%,rgba(255,255,255,0.24),transparent_38%)]" />
-      <div className="absolute inset-x-2 bottom-1 h-4 rounded-full bg-black/10 blur-md" />
+      <div className="absolute inset-x-2 bottom-1 h-3 rounded-full bg-black/10 blur-md" />
       <div className="relative z-10">{children}</div>
     </div>
   );
@@ -187,7 +253,7 @@ function IconTile({
 function PackageTile() {
   return (
     <IconTile className="bg-[linear-gradient(145deg,#C86BFF_0%,#9858FF_58%,#6A35F0_100%)]">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <defs>
           <linearGradient id="boxTop" x1="8" y1="4" x2="16" y2="9" gradientUnits="userSpaceOnUse">
             <stop stopColor="#FDE7BA" />
@@ -224,7 +290,7 @@ function PackageTile() {
 function WandTile() {
   return (
     <IconTile className="bg-[linear-gradient(145deg,#28D0FF_0%,#1DA8FF_56%,#226DFF_100%)]">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <defs>
           <linearGradient id="wandHead" x1="10" y1="8" x2="18" y2="17" gradientUnits="userSpaceOnUse">
             <stop stopColor="#FF59D6" />
@@ -265,7 +331,7 @@ function WandTile() {
 function ImageTile() {
   return (
     <IconTile className="bg-[linear-gradient(145deg,#31E8B4_0%,#18D8A2_56%,#06B88A_100%)]">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="4.5" y="5.5" width="15" height="13" rx="2.5" fill="#82F0DD" />
         <rect x="4.5" y="5.5" width="15" height="13" rx="2.5" stroke="#FFF2A8" strokeWidth="1.4" />
         <path d="M5.7 7.2h12.6v4.2H5.7z" fill="#9DDCFF" />
@@ -283,7 +349,7 @@ function ImageTile() {
 function LockTile() {
   return (
     <IconTile className="bg-[linear-gradient(145deg,#FFB734_0%,#FF784A_54%,#FF4D95_100%)]">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="7" y="10" width="10" height="8" rx="2.3" fill="#FFC84A" />
         <path
           d="M8.5 10V8.4a3.5 3.5 0 1 1 7 0V10"
@@ -307,10 +373,49 @@ function Card({ title, desc, titleClassName }: any) {
   );
 }
 
-function GlassBox({ text }: any) {
+function LinkedInLogo() {
   return (
-    <div className="bg-white/5 p-5 rounded-2xl backdrop-blur-xl border border-white/10 hover:scale-105 transition">
-      {text}
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="3.5" fill="#FFFFFF" fillOpacity="0.14" />
+      <path
+        d="M8.2 9.4a1.35 1.35 0 1 0 0-2.7 1.35 1.35 0 0 0 0 2.7Zm-1.15 1.55h2.3v6.95h-2.3v-6.95Zm3.75 0h2.2v.95h.03c.3-.58 1.05-1.2 2.16-1.2 2.31 0 2.74 1.52 2.74 3.5v3.66h-2.29v-3.24c0-.77-.02-1.77-1.08-1.77-1.08 0-1.24.84-1.24 1.72v3.29h-2.3v-6.91Z"
+        fill="#FFFFFF"
+      />
+    </svg>
+  );
+}
+
+function FooterLinkedIn() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M7.9 9.6a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6Zm-1.1 1.5H9v6.7H6.8v-6.7Zm3.6 0h2.1v.9h.1c.3-.5 1-1.2 2.1-1.2 2.2 0 2.6 1.5 2.6 3.4v3.6h-2.2v-3.1c0-.8 0-1.8-1.1-1.8s-1.2.8-1.2 1.7v3.2h-2.3v-6.7Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function ContactItem({
+  icon,
+  iconClassName,
+  label,
+  value,
+}: {
+  icon: React.ReactNode;
+  iconClassName: string;
+  label: string;
+  value: string;
+}) {
+  return (
+    <div className="flex items-center gap-3.5 rounded-[16px] bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(76,205,196,0.06))] px-3.5 py-3">
+      <div className={`flex h-12 w-12 items-center justify-center rounded-[14px] ${iconClassName}`}>
+        {icon}
+      </div>
+      <div>
+        <p className="text-[0.78rem] font-semibold tracking-[0.12em] text-[#7E8EAA]">{label}</p>
+        <p className="mt-1 text-[0.9rem] font-semibold text-white">{value}</p>
+      </div>
     </div>
   );
 }
