@@ -161,18 +161,23 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-5 text-left backdrop-blur-xl">
-            <h3 className="text-[1.5rem] font-semibold">About the Creator</h3>
-            <div className="mt-5 flex items-start gap-3.5">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[16px] bg-[linear-gradient(145deg,#17C8D1_0%,#12B981_100%)] shadow-[0_18px_36px_rgba(20,184,166,0.18)]">
+          <div className="flex h-full flex-col rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-6 text-left backdrop-blur-xl md:p-7">
+            <div className="space-y-2">
+              <h3 className="text-[1.5rem] font-semibold leading-tight">About the Creator</h3>
+              <p className="max-w-[360px] text-[0.9rem] leading-relaxed text-[#9DB2D5]">
+                The person behind OptiVerse XR, focused on performant immersive experiences.
+              </p>
+            </div>
+            <div className="mt-6 flex items-start gap-4">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center self-start rounded-[18px] bg-[linear-gradient(145deg,#17C8D1_0%,#12B981_100%)] shadow-[0_18px_36px_rgba(20,184,166,0.18)]">
                 <CreatorLogo />
               </div>
-              <div>
-                <h4 className="text-[1.28rem] font-semibold leading-none">Vigneshwaran B</h4>
-                <p className="mt-2 text-[0.88rem] text-[#9DB2D5]">
+              <div className="min-w-0 flex-1 pt-0.5">
+                <h4 className="text-[1.3rem] font-semibold leading-tight">Vigneshwaran B</h4>
+                <p className="mt-2 text-[0.9rem] leading-relaxed text-[#9DB2D5]">
                   XR Developer &amp; Real-Time 3D Creator
                 </p>
-                <p className="mt-3.5 max-w-[320px] text-[0.86rem] leading-[1.65] text-[#C2CDE0]">
+                <p className="mt-4 max-w-[340px] text-[0.88rem] leading-[1.75] text-[#C2CDE0]">
                   Turning ideas into interactive 3D experiences using Unity,
                   Blender, and WebXR. Exploring the future of spatial computing
                   through AR, VR, and immersive web technologies.
@@ -384,7 +389,7 @@ function FooterLinkedIn() {
 
 function CreatorLogo() {
   return (
-    <svg width="48" height="48" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+    <svg width="56" height="56" viewBox="0 0 64 64" fill="none" aria-hidden="true">
       <circle cx="32" cy="18" r="8.2" fill="#F7B267" />
       <path d="M24.7 17.1c1.1-5.2 13.5-5.9 14.7 0v3.4H24.7v-3.4Z" fill="#D57E1F" />
       <circle cx="29.3" cy="18.2" r="0.95" fill="#1F2937" />
