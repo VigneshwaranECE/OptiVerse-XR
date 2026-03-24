@@ -1,4 +1,5 @@
-import { ArrowDown, ArrowRightLeft, Box, Eye, HomeIcon, Zap } from "lucide-react";
+import { Box, Zap } from "lucide-react";
+import FloatingDock from "./components/FloatingDock";
 import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { HiOutlineEnvelope } from "react-icons/hi2";
@@ -31,12 +32,12 @@ type ContactItemProps = {
 export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center gap-6 overflow-hidden bg-gradient-to-b from-[#0b0f2a] to-[#050816] px-6 pt-12 pb-36 text-white">
-      <div className="absolute top-0 left-[-100px] h-[400px] w-[400px] rounded-full bg-blue-500/14 blur-[120px]" />
-      <div className="absolute right-[-100px] bottom-0 h-[400px] w-[400px] rounded-full bg-purple-500/14 blur-[120px]" />
+      <div className="absolute top-0 left-[-100px] h-[400px] w-[400px] rounded-full bg-blue-500/8 blur-[100px]" />
+      <div className="absolute right-[-100px] bottom-0 h-[400px] w-[400px] rounded-full bg-purple-500/8 blur-[100px]" />
 
       <section className="z-10 max-w-5xl text-center">
-        <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#18263d]/90 px-3.5 py-2.5 shadow-[0_8px_18px_rgba(5,8,22,0.24)] backdrop-blur-xl">
-          <div className="flex h-7 w-7 items-center justify-center rounded-xl bg-gradient-to-br from-[#7C3AED] to-[#38BDF8] shadow-[inset_0_1px_1px_rgba(255,255,255,0.18),0_4px_10px_rgba(56,189,248,0.16)]">
+        <div className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-[#18263d]/90 px-3.5 py-2.5 shadow-[0_6px_14px_rgba(5,8,22,0.18)] backdrop-blur-xl">
+          <div className="flex h-7 w-7 items-center justify-center rounded-xl bg-gradient-to-br from-[#7C3AED] to-[#38BDF8] shadow-[inset_0_1px_1px_rgba(255,255,255,0.14),0_3px_8px_rgba(56,189,248,0.1)]">
             <Box size={15} className="text-white" />
           </div>
           <span className="text-[1.05rem] font-semibold leading-none tracking-[-0.03em] text-[#F4F7FB]">
@@ -59,17 +60,20 @@ export default function Home() {
         <div className="mt-6 flex justify-center gap-4">
           <Link
             href="/compress"
-            className="flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#7C3AED] to-[#0EA5E9] px-8 py-3.5 text-base font-semibold shadow-[0_0_16px_rgba(124,58,237,0.22)] transition duration-300 hover:scale-105 hover:shadow-[0_0_22px_rgba(124,58,237,0.34)]"
+            className="flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#7C3AED] to-[#0EA5E9] px-8 py-3.5 text-base font-semibold shadow-[0_0_10px_rgba(124,58,237,0.14)] transition duration-300 hover:scale-105 hover:shadow-[0_0_14px_rgba(124,58,237,0.22)]"
           >
             <Zap size={17} className="text-white" strokeWidth={2.4} /> Start Optimizing
           </Link>
-          <button className="rounded-2xl border border-white/10 bg-[#1e293b]/50 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-md transition duration-300 hover:bg-[#1e293b]/80">
+          <Link
+            href="/view"
+            className="rounded-2xl border border-white/10 bg-[#1e293b]/50 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-md transition duration-300 hover:bg-[#1e293b]/80"
+          >
             View Models
-          </button>
+          </Link>
         </div>
       </section>
 
-      <section className="relative z-10 grid w-full max-w-[620px] grid-cols-2 gap-1 overflow-hidden rounded-[28px] border border-white/5 bg-[#0a0f1d]/40 px-3 py-6 shadow-2xl backdrop-blur-xl before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_18%_50%,rgba(34,211,238,0.12),transparent_42%),radial-gradient(circle_at_82%_20%,rgba(168,85,247,0.1),transparent_38%)] md:grid-cols-4">
+      <section className="relative z-10 grid w-full max-w-[620px] grid-cols-2 gap-1 overflow-hidden rounded-[28px] border border-white/5 bg-[#0a0f1d]/40 px-3 py-6 shadow-[0_18px_40px_rgba(2,6,23,0.24)] backdrop-blur-xl before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_18%_50%,rgba(34,211,238,0.07),transparent_42%),radial-gradient(circle_at_82%_20%,rgba(168,85,247,0.06),transparent_38%)] md:grid-cols-4">
         <Stat title="90%" desc="Size Reduction" />
         <Stat title="13+" desc="File Formats" />
         <Stat title="100%" desc="Client-Side" />
@@ -230,54 +234,8 @@ export default function Home() {
         </div>
       </footer>
 
-      <FloatingDock />
+      <FloatingDock active="home" />
     </main>
-  );
-}
-
-function FloatingDock() {
-  return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-10 z-30 px-4">
-      <div className="mx-auto w-full max-w-fit overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <nav className="pointer-events-auto mx-auto flex min-w-[360px] items-center gap-3 rounded-[32px] border border-white/10 bg-[#0a0b17]/92 px-2.5 py-1 pr-5 shadow-[0_20px_50px_rgba(2,6,23,0.55)] backdrop-blur-2xl">
-          <Link
-            href="/"
-            className="flex min-w-[120px] items-center gap-2.5 rounded-[20px] bg-[linear-gradient(90deg,#8B5CF6_0%,#16C7F3_100%)] px-[18px] py-2 text-[0.98rem] font-semibold text-white shadow-[0_0_24px_rgba(139,92,246,0.4)]"
-          >
-            <span className="flex h-[26px] w-[26px] items-center justify-center rounded-[14px] bg-white/8">
-              <HomeIcon size={17} strokeWidth={2.2} />
-            </span>
-            <span>Home</span>
-          </Link>
-          <DockDivider />
-          <DockIconButton icon={<ArrowDown size={24} strokeWidth={2} />} label="Download" />
-          <DockIconButton icon={<ArrowRightLeft size={24} strokeWidth={2} />} label="Swap" />
-          <DockIconButton icon={<Eye size={24} strokeWidth={2} />} label="Preview" />
-        </nav>
-      </div>
-    </div>
-  );
-}
-
-function DockDivider() {
-  return <div className="h-6 w-px bg-white/14" aria-hidden="true" />;
-}
-
-function DockIconButton({
-  icon,
-  label,
-}: {
-  icon: React.ReactNode;
-  label: string;
-}) {
-  return (
-    <button
-      type="button"
-      aria-label={label}
-      className="flex h-8 w-14 items-center justify-center rounded-full text-white/60 transition duration-300 hover:bg-white/6 hover:text-white"
-    >
-      {icon}
-    </button>
   );
 }
 
