@@ -1,4 +1,6 @@
-import { Box, Mail, Zap } from "lucide-react";
+import { Box, Zap } from "lucide-react";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { HiOutlineEnvelope } from "react-icons/hi2";
 
 type StatProps = {
   title: string;
@@ -143,14 +145,14 @@ export default function Home() {
             <h3 className="text-[1.5rem] font-semibold">Get in Touch</h3>
             <div className="mt-5 space-y-3.5">
               <ContactItem
-                icon={<Mail size={24} className="text-white" />}
+                icon={<HiOutlineEnvelope className="text-[1.7rem] text-white" />}
                 iconClassName="bg-[linear-gradient(145deg,#A855F7_0%,#7C3AED_100%)]"
                 label="EMAIL"
                 value="vigneshsaran2596@gmail.com"
                 href="mailto:vigneshsaran2596@gmail.com"
               />
               <ContactItem
-                icon={<LinkedInLogo />}
+                icon={<FaLinkedinIn className="text-[1.65rem] text-white" />}
                 iconClassName="bg-[linear-gradient(145deg,#1DA1F2_0%,#0A66C2_100%)]"
                 label="LINKEDIN"
                 value="Vigneshwaran B"
@@ -162,8 +164,8 @@ export default function Home() {
           <div className="rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-5 text-left backdrop-blur-xl">
             <h3 className="text-[1.5rem] font-semibold">About the Creator</h3>
             <div className="mt-5 flex items-start gap-3.5">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[16px] bg-[linear-gradient(145deg,#17C8D1_0%,#12B981_100%)] text-[1rem] font-semibold shadow-[0_18px_36px_rgba(20,184,166,0.18)]">
-                <span aria-hidden="true">XR</span>
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[16px] bg-[linear-gradient(145deg,#17C8D1_0%,#12B981_100%)] shadow-[0_18px_36px_rgba(20,184,166,0.18)]">
+                <CreatorLogo />
               </div>
               <div>
                 <h4 className="text-[1.28rem] font-semibold leading-none">Vigneshwaran B</h4>
@@ -214,7 +216,7 @@ export default function Home() {
               aria-label="Email"
               className="flex h-10 w-10 items-center justify-center rounded-[12px] border border-white/6 bg-white/6 text-[#A9B1C8] transition hover:bg-white/10 hover:text-white"
             >
-              <Mail size={22} />
+              <HiOutlineEnvelope className="text-[1.35rem]" />
             </a>
           </div>
         </div>
@@ -374,27 +376,26 @@ function Card({ title, desc, titleClassName }: CardProps) {
   );
 }
 
-function LinkedInLogo() {
+function FooterLinkedIn() {
   return (
-    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <rect x="3.5" y="3.5" width="17" height="17" rx="3.5" fill="#FFFFFF" fillOpacity="0.14" />
-      <path
-        d="M8.2 9.4a1.35 1.35 0 1 0 0-2.7 1.35 1.35 0 0 0 0 2.7Zm-1.15 1.55h2.3v6.95h-2.3v-6.95Zm3.75 0h2.2v.95h.03c.3-.58 1.05-1.2 2.16-1.2 2.31 0 2.74 1.52 2.74 3.5v3.66h-2.29v-3.24c0-.77-.02-1.77-1.08-1.77-1.08 0-1.24.84-1.24 1.72v3.29h-2.3v-6.91Z"
-        fill="#FFFFFF"
-      />
-    </svg>
+    <FaLinkedinIn className="text-[1.45rem]" aria-hidden="true" />
   );
 }
 
-function FooterLinkedIn() {
+function CreatorLogo() {
   return (
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <circle cx="8.2" cy="7.5" r="1.55" fill="currentColor" />
-      <rect x="6.6" y="9.4" width="3" height="8.3" rx="0.55" fill="currentColor" />
-      <path
-        d="M10.7 9.3h2.85v1.18h.06c.4-.75 1.3-1.52 2.7-1.52 2.45 0 3.08 1.62 3.08 4.03v4.48h-2.97v-3.95c0-.94-.17-2.12-1.48-2.12-1.28 0-1.53 1-1.53 2.03v4.04h-2.71V9.3Z"
-        fill="currentColor"
-      />
+    <svg width="48" height="48" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <circle cx="32" cy="18" r="8.2" fill="#F7B267" />
+      <path d="M24.7 17.1c1.1-5.2 13.5-5.9 14.7 0v3.4H24.7v-3.4Z" fill="#D57E1F" />
+      <circle cx="29.3" cy="18.2" r="0.95" fill="#1F2937" />
+      <circle cx="34.7" cy="18.2" r="0.95" fill="#1F2937" />
+      <path d="M29.8 21.4c1.1.8 3.3.8 4.4 0" stroke="#A54A14" strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M27.4 27.4h9.2c2.8 0 5 2.2 5 5v4H22.4v-4c0-2.8 2.2-5 5-5Z" fill="#B794F4" />
+      <path d="M27.8 33.5 24.7 36" stroke="#F7B267" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M36.2 33.5 39.3 36" stroke="#F7B267" strokeWidth="1.8" strokeLinecap="round" />
+      <rect x="18.5" y="35.8" width="27" height="10.5" rx="2.6" fill="#B58AF5" />
+      <rect x="20.1" y="37.2" width="23.8" height="7.4" rx="1.7" fill="#C7A8FF" />
+      <circle cx="32" cy="40.8" r="0.9" fill="#5B4B7A" />
     </svg>
   );
 }
