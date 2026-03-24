@@ -187,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="z-10 mt-16 w-full border-t border-white/8 pt-10">
+      <footer className="z-10 mt-16 w-full border-t border-white/8 pt-6">
         <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center justify-between gap-6 px-4 text-center md:flex-row md:text-left">
           <div className="flex items-center gap-2.5">
             <div className="flex h-9 w-9 items-center justify-center rounded-[12px] bg-gradient-to-br from-[#7C3AED] to-[#38BDF8] shadow-[inset_0_1px_1px_rgba(255,255,255,0.18)]">
@@ -233,15 +233,15 @@ export default function Home() {
 
 function FloatingDock() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-6 z-30 px-4">
+    <div className="pointer-events-none fixed inset-x-0 bottom-10 z-30 px-4">
       <div className="mx-auto w-full max-w-fit overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <nav className="pointer-events-auto mx-auto flex min-w-[340px] items-center gap-3 rounded-[34px] border border-white/10 bg-[#0a0b17]/92 px-2.5 py-2 pr-5 shadow-[0_20px_50px_rgba(2,6,23,0.55)] backdrop-blur-2xl">
+        <nav className="pointer-events-auto mx-auto flex min-w-[360px] items-center gap-3 rounded-[32px] border border-white/10 bg-[#0a0b17]/92 px-2.5 py-1 pr-5 shadow-[0_20px_50px_rgba(2,6,23,0.55)] backdrop-blur-2xl">
           <a
             href="#"
-            className="flex min-w-[120px] items-center gap-2.5 rounded-[24px] bg-[linear-gradient(90deg,#8B5CF6_0%,#16C7F3_100%)] px-[18px] py-3 text-[0.98rem] font-semibold text-white shadow-[0_0_24px_rgba(139,92,246,0.4)]"
+            className="flex min-w-[120px] items-center gap-2.5 rounded-[20px] bg-[linear-gradient(90deg,#8B5CF6_0%,#16C7F3_100%)] px-[18px] py-2 text-[0.98rem] font-semibold text-white shadow-[0_0_24px_rgba(139,92,246,0.4)]"
           >
-            <span className="flex h-7 w-7 items-center justify-center rounded-[16px] bg-white/8">
-              <HomeIcon size={18} strokeWidth={2.2} />
+            <span className="flex h-[26px] w-[26px] items-center justify-center rounded-[14px] bg-white/8">
+              <HomeIcon size={17} strokeWidth={2.2} />
             </span>
             <span>Home</span>
           </a>
@@ -256,7 +256,7 @@ function FloatingDock() {
 }
 
 function DockDivider() {
-  return <div className="h-8 w-px bg-white/14" aria-hidden="true" />;
+  return <div className="h-6 w-px bg-white/14" aria-hidden="true" />;
 }
 
 function DockIconButton({
@@ -270,7 +270,7 @@ function DockIconButton({
     <button
       type="button"
       aria-label={label}
-      className="flex h-10 w-14 items-center justify-center rounded-full text-white/60 transition duration-300 hover:bg-white/6 hover:text-white"
+      className="flex h-8 w-14 items-center justify-center rounded-full text-white/60 transition duration-300 hover:bg-white/6 hover:text-white"
     >
       {icon}
     </button>
