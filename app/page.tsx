@@ -398,7 +398,7 @@ function FooterLinkedIn() {
 
 function ContactItem({ icon, iconClassName, label, value }: ContactItemProps) {
   return (
-    <div className="flex items-center gap-3.5 rounded-[16px] bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(76,205,196,0.06))] px-3.5 py-3">
+    <div className="flex items-center gap-3.5 rounded-[16px] bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(76,205,196,0.06))] px-3.5 py-3 shadow-[0_0_0_rgba(56,189,248,0)] transition duration-300 hover:scale-[1.02] hover:shadow-[0_0_22px_rgba(56,189,248,0.16)]">
       <div className={`flex h-12 w-12 items-center justify-center rounded-[14px] ${iconClassName}`}>
         {icon}
       </div>
