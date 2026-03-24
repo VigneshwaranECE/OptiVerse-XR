@@ -22,6 +22,7 @@ type ContactItemProps = {
   iconClassName: string;
   label: string;
   value: string;
+  href: string;
 };
 
 export default function Home() {
@@ -146,12 +147,14 @@ export default function Home() {
                 iconClassName="bg-[linear-gradient(145deg,#A855F7_0%,#7C3AED_100%)]"
                 label="EMAIL"
                 value="vigneshsaran2596@gmail.com"
+                href="mailto:vigneshsaran2596@gmail.com"
               />
               <ContactItem
                 icon={<LinkedInLogo />}
                 iconClassName="bg-[linear-gradient(145deg,#1DA1F2_0%,#0A66C2_100%)]"
                 label="LINKEDIN"
                 value="Vigneshwaran B"
+                href="https://www.linkedin.com/"
               />
             </div>
           </div>
@@ -396,9 +399,20 @@ function FooterLinkedIn() {
   );
 }
 
-function ContactItem({ icon, iconClassName, label, value }: ContactItemProps) {
+function ContactItem({
+  icon,
+  iconClassName,
+  label,
+  value,
+  href,
+}: ContactItemProps) {
   return (
-    <div className="flex items-center gap-3.5 rounded-[16px] bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(76,205,196,0.06))] px-3.5 py-3 shadow-[0_0_0_rgba(56,189,248,0)] transition duration-300 hover:scale-[1.02] hover:shadow-[0_0_22px_rgba(56,189,248,0.16)]">
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noreferrer" : undefined}
+      className="flex items-center gap-3.5 rounded-[16px] bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(76,205,196,0.06))] px-3.5 py-3 shadow-[0_0_0_rgba(56,189,248,0)] transition duration-300 hover:scale-[1.02] hover:shadow-[0_0_22px_rgba(56,189,248,0.16)]"
+    >
       <div className={`flex h-12 w-12 items-center justify-center rounded-[14px] ${iconClassName}`}>
         {icon}
       </div>
@@ -406,6 +420,6 @@ function ContactItem({ icon, iconClassName, label, value }: ContactItemProps) {
         <p className="text-[0.78rem] font-semibold tracking-[0.12em] text-[#7E8EAA]">{label}</p>
         <p className="mt-1 text-[0.9rem] font-semibold text-white">{value}</p>
       </div>
-    </div>
+    </a>
   );
 }
