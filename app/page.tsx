@@ -1,4 +1,5 @@
 import { ArrowDown, ArrowRightLeft, Box, Eye, HomeIcon, Zap } from "lucide-react";
+import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 
@@ -56,9 +57,12 @@ export default function Home() {
         </p>
 
         <div className="mt-6 flex justify-center gap-4">
-          <button className="flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#7C3AED] to-[#0EA5E9] px-8 py-3.5 text-base font-semibold shadow-[0_0_16px_rgba(124,58,237,0.22)] transition duration-300 hover:scale-105 hover:shadow-[0_0_22px_rgba(124,58,237,0.34)]">
+          <Link
+            href="/compress"
+            className="flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#7C3AED] to-[#0EA5E9] px-8 py-3.5 text-base font-semibold shadow-[0_0_16px_rgba(124,58,237,0.22)] transition duration-300 hover:scale-105 hover:shadow-[0_0_22px_rgba(124,58,237,0.34)]"
+          >
             <Zap size={17} className="text-white" strokeWidth={2.4} /> Start Optimizing
-          </button>
+          </Link>
           <button className="rounded-2xl border border-white/10 bg-[#1e293b]/50 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-md transition duration-300 hover:bg-[#1e293b]/80">
             View Models
           </button>
@@ -145,14 +149,14 @@ export default function Home() {
             <h3 className="text-[1.5rem] font-semibold">Get in Touch</h3>
             <div className="mt-5 space-y-3.5">
               <ContactItem
-                icon={<HiOutlineEnvelope className="text-[1.7rem] text-white" />}
+                icon={<HiOutlineEnvelope className="text-[2.2rem] text-white" />}
                 iconClassName="bg-[linear-gradient(145deg,#A855F7_0%,#7C3AED_100%)]"
                 label="EMAIL"
                 value="vigneshsaran2596@gmail.com"
                 href="mailto:vigneshsaran2596@gmail.com"
               />
               <ContactItem
-                icon={<FaLinkedinIn className="text-[1.65rem] text-white" />}
+                icon={<FaLinkedinIn className="text-[2.2rem] text-white" />}
                 iconClassName="bg-[linear-gradient(145deg,#1DA1F2_0%,#0A66C2_100%)]"
                 label="LINKEDIN"
                 value="Vigneshwaran B"
@@ -236,15 +240,15 @@ function FloatingDock() {
     <div className="pointer-events-none fixed inset-x-0 bottom-10 z-30 px-4">
       <div className="mx-auto w-full max-w-fit overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <nav className="pointer-events-auto mx-auto flex min-w-[360px] items-center gap-3 rounded-[32px] border border-white/10 bg-[#0a0b17]/92 px-2.5 py-1 pr-5 shadow-[0_20px_50px_rgba(2,6,23,0.55)] backdrop-blur-2xl">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="flex min-w-[120px] items-center gap-2.5 rounded-[20px] bg-[linear-gradient(90deg,#8B5CF6_0%,#16C7F3_100%)] px-[18px] py-2 text-[0.98rem] font-semibold text-white shadow-[0_0_24px_rgba(139,92,246,0.4)]"
           >
             <span className="flex h-[26px] w-[26px] items-center justify-center rounded-[14px] bg-white/8">
               <HomeIcon size={17} strokeWidth={2.2} />
             </span>
             <span>Home</span>
-          </a>
+          </Link>
           <DockDivider />
           <DockIconButton icon={<ArrowDown size={24} strokeWidth={2} />} label="Download" />
           <DockIconButton icon={<ArrowRightLeft size={24} strokeWidth={2} />} label="Swap" />
@@ -466,7 +470,7 @@ function ContactItem({
       rel={href.startsWith("http") ? "noreferrer" : undefined}
       className="flex items-center gap-3.5 rounded-[16px] bg-[linear-gradient(90deg,rgba(255,255,255,0.05),rgba(76,205,196,0.06))] px-3.5 py-3 shadow-[0_0_0_rgba(56,189,248,0)] transition duration-300 hover:scale-[1.02] hover:shadow-[0_0_22px_rgba(56,189,248,0.16)]"
     >
-      <div className={`flex h-12 w-12 items-center justify-center rounded-[14px] ${iconClassName}`}>
+      <div className={`flex h-[58px] w-[58px] items-center justify-center rounded-[17px] ${iconClassName}`}>
         {icon}
       </div>
       <div>
