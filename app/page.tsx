@@ -1,4 +1,4 @@
-import { Box, Zap } from "lucide-react";
+import { ArrowDown, ArrowRightLeft, Box, Eye, HomeIcon, Zap } from "lucide-react";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 
@@ -29,7 +29,7 @@ type ContactItemProps = {
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen flex-col items-center gap-6 overflow-hidden bg-gradient-to-b from-[#0b0f2a] to-[#050816] px-6 pt-12 pb-16 text-white">
+    <main className="relative flex min-h-screen flex-col items-center gap-6 overflow-hidden bg-gradient-to-b from-[#0b0f2a] to-[#050816] px-6 pt-12 pb-36 text-white">
       <div className="absolute top-0 left-[-100px] h-[400px] w-[400px] rounded-full bg-blue-500/14 blur-[120px]" />
       <div className="absolute right-[-100px] bottom-0 h-[400px] w-[400px] rounded-full bg-purple-500/14 blur-[120px]" />
 
@@ -162,15 +162,14 @@ export default function Home() {
           </div>
 
           <div className="flex h-full flex-col rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-6 text-left backdrop-blur-xl md:p-7">
-            <div className="space-y-2">
+            <div>
               <h3 className="text-[1.5rem] font-semibold leading-tight">About the Creator</h3>
-              <p className="max-w-[360px] text-[0.9rem] leading-relaxed text-[#9DB2D5]">
-                The person behind OptiVerse XR, focused on performant immersive experiences.
-              </p>
             </div>
             <div className="mt-6 flex items-start gap-4">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center self-start rounded-[18px] bg-[linear-gradient(145deg,#17C8D1_0%,#12B981_100%)] shadow-[0_18px_36px_rgba(20,184,166,0.18)]">
-                <CreatorLogo />
+              <div className="relative flex h-14 w-14 shrink-0 items-center justify-center self-start rounded-[16px] bg-[linear-gradient(145deg,#17C8D1_0%,#12B981_100%)] shadow-[0_18px_36px_rgba(20,184,166,0.18)]">
+                <div className="relative z-10">
+                  <CreatorLogo />
+                </div>
               </div>
               <div className="min-w-0 flex-1 pt-0.5">
                 <h4 className="text-[1.3rem] font-semibold leading-tight">Vigneshwaran B</h4>
@@ -226,7 +225,55 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <FloatingDock />
     </main>
+  );
+}
+
+function FloatingDock() {
+  return (
+    <div className="pointer-events-none fixed inset-x-0 bottom-6 z-30 px-4">
+      <div className="mx-auto w-full max-w-fit overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <nav className="pointer-events-auto mx-auto flex min-w-[340px] items-center gap-3 rounded-[34px] border border-white/10 bg-[#0a0b17]/92 px-2.5 py-2 pr-5 shadow-[0_20px_50px_rgba(2,6,23,0.55)] backdrop-blur-2xl">
+          <a
+            href="#"
+            className="flex min-w-[120px] items-center gap-2.5 rounded-[24px] bg-[linear-gradient(90deg,#8B5CF6_0%,#16C7F3_100%)] px-[18px] py-3 text-[0.98rem] font-semibold text-white shadow-[0_0_24px_rgba(139,92,246,0.4)]"
+          >
+            <span className="flex h-7 w-7 items-center justify-center rounded-[16px] bg-white/8">
+              <HomeIcon size={18} strokeWidth={2.2} />
+            </span>
+            <span>Home</span>
+          </a>
+          <DockDivider />
+          <DockIconButton icon={<ArrowDown size={24} strokeWidth={2} />} label="Download" />
+          <DockIconButton icon={<ArrowRightLeft size={24} strokeWidth={2} />} label="Swap" />
+          <DockIconButton icon={<Eye size={24} strokeWidth={2} />} label="Preview" />
+        </nav>
+      </div>
+    </div>
+  );
+}
+
+function DockDivider() {
+  return <div className="h-8 w-px bg-white/14" aria-hidden="true" />;
+}
+
+function DockIconButton({
+  icon,
+  label,
+}: {
+  icon: React.ReactNode;
+  label: string;
+}) {
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      className="flex h-10 w-14 items-center justify-center rounded-full text-white/60 transition duration-300 hover:bg-white/6 hover:text-white"
+    >
+      {icon}
+    </button>
   );
 }
 
