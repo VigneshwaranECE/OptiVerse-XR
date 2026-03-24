@@ -181,7 +181,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="z-10 mt-10 w-full border-t border-white/8 pt-10">
+      <footer className="z-10 mt-16 w-full border-t border-white/8 pt-10">
         <div className="mx-auto flex w-full max-w-[1120px] flex-col items-center justify-between gap-6 px-4 text-center md:flex-row md:text-left">
           <div className="flex items-center gap-2.5">
             <div className="flex h-9 w-9 items-center justify-center rounded-[12px] bg-gradient-to-br from-[#7C3AED] to-[#38BDF8] shadow-[inset_0_1px_1px_rgba(255,255,255,0.18)]">
